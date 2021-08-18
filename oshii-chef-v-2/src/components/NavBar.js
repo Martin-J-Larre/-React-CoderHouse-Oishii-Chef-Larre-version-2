@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CartWidget } from './CartWidget';
 
 
 
@@ -26,11 +27,7 @@ export const NavBar = () => {
                             <Link to="/">Signup</Link>
                         </li>
                     </ul>
-                    <ul>
-                        <li>
-                            <Link to="/">Cart</Link>
-                        </li>
-                    </ul>
+                   <CartWidget />
                 </div>  
             </header> 
         </>

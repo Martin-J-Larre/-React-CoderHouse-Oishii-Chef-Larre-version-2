@@ -33,8 +33,28 @@
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
-    padding: 0px 15px;
+    padding: 0px 20px;
 }
 .header-links ul li a:hover{
     color: #fffc3c;
+}
+/* CartWidget / cart icon NavBar */
+.fa-shopping-cart{
+    font-size: 25px;
+
+}
+
+/* itemsListContainer */
+.itemsListContainer{
+    height: 80vh;
+    width: 80%;
+    margin: 0 auto;
+    /* cambiar el color del background */
+    background-color: #E7ECE9;
+}
+.titulos{
+    text-align: center;
+    font-size: 35px;
+    /* cambiar el color del titulo */
+    color: #196F3D ;
 }
