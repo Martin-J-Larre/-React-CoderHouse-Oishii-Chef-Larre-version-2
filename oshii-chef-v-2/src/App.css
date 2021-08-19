@@ -73,3 +73,12 @@
     color: #fff;
     background-color:#000;
 }
+
+/* Item.js */
+.Item-container{
+    color:#196F3D ;
+    margin: 5px;
+    font-size: 25px;
+    text-align: center;
+/* Cambiar toda esta cosa horrible */
+}
