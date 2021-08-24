@@ -1,16 +1,24 @@
-import React from 'react';
-import ItemCount from './ItemCount';
-import ItemList from './ItemList'
+import { useEffect, useState } from 'react';
+import { productos } from './productos';
+import ItemList from './ItemList';
 
-const ItemsListContainer = (props) => {
+const ItemListContainer = () => {
     
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        new Promise((resolve, reject) => {
+            setTimeout(() => resolve(productos), 2000)
+        }).then(data => setProducts(data))
+    }, []);
+
+    console.log("data = ************** ", products);
+
     return (
         <div className="itemsListContainer">
-           <h1 className="titulos">{props.titulo}</h1>
-           <ItemCount valorInicial={0} stock={10}/>
-           <ItemList />
+          <ItemList products ={products}/>
         </div>   
     );
 }
 
-export default ItemsListContainer
+export default ItemListContainer;

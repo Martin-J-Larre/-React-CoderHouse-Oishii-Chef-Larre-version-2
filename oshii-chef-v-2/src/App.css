@@ -46,7 +46,6 @@
 
 /* itemsListContainer */
 .itemsListContainer{
-    height: 40vh;
     width: 80%;
     margin: 0 auto;
     /* cambiar el color del background */
@@ -80,5 +79,7 @@
     margin: 5px;
     font-size: 25px;
     text-align: center;
+    border: 2px dotted red;
+    margin-top: 5px;
 /* Cambiar toda esta cosa horrible */
 }

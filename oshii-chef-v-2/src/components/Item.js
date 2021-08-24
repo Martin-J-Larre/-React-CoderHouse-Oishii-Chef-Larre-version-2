@@ -1,14 +1,18 @@
-import React from 'react';
+import { Link } from "react-router-dom";
+import ItemCount from "./ItemCount";
 
 const Item = (props) => {
     
     return (
-       <>
+
          <div className="Item-container">
-             <h5>{props.valor}</h5>
-         </div>
-       </>
-    );
+             <h5>Id:{props.id}</h5>
+             <h5>$ {props.precio}</h5>
+             <h5>{props.titulo}</h5>
+             <ItemCount valorInicial={0} stock={10}/>
+             <Link to={`/item/${props.id}`}>Detalle del producto</Link>
+          </div>
+          );
 }
 
 export default Item

@@ -1,34 +1,27 @@
-import React, { useState, useEffect, Fragment} from 'react';
-// import products from './products.json'
+import { useEffect, useState } from 'react';
+import { useParams} from 'react-router-dom'
+import { productos } from './productos';
+import ItemDetail from './ItemDetail';
 
-function ItemDetailContainer(){
-    const [data, setData] = useState([]);
+const ItemDetailContainer = () => {
+    
+    const [product, setProduct] = useState([]);
 
-    useEffect( () => {
-        obtenerData();
+    const {id} = useParams();
+
+    useEffect(() => {
+        new Promise((resolve, reject) => {
+            setTimeout(() => resolve(productos.filter((item) => item.id === id)), 2000);
+        }).then((data) => setProduct(data[0]));
     }, []);
 
-    const obtenerData = async () => {
-        await fetch("products.json")
-        .then(response => response.json())
-        .then(receivedData => setData(receivedData));
-}
-console.log(data);
+    console.log("product ========", product);
+
     return (
-        
-        <div>
-            {data.map(cadaProducto => (
-                <Fragment>
-                <div>{cadaProducto.precio},</div>
-                <div>{cadaProducto.id}</div>
-                <div>{cadaProducto.titulo}</div>
-                <div>{cadaProducto.imagenUrl}</div>
-                </Fragment>
-            ))}
-            
-        </div>
+        <div className="itemsListContainer">
+          <ItemDetail {...product}/>
+        </div>   
     );
-    
 }
 
-export default ItemDetailContainer
+export default ItemDetailContainer;
