@@ -75,11 +75,27 @@
 
 /* Item.js */
 .Item-container{
-    color:#196F3D ;
+    color:#196F3D;
+    width: 30%;
     margin: 5px;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     border: 2px dotted red;
     margin-top: 5px;
+    display: inline-block;
+    
 /* Cambiar toda esta cosa horrible */
+}
+
+/* itemsDetailContainer */
+.items-Detail-Container{
+    color:#196F3D;
+    margin: 5px;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 15px;
+   
+}
+.img-item{
+    width: 100%;
 }

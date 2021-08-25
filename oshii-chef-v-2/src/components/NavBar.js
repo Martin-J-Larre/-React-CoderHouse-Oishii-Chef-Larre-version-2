@@ -1,6 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
 import { CartWidget } from './CartWidget';
+// import Category from './Category';
+
 
 export const NavBar = () => {
     return (
@@ -20,6 +22,12 @@ export const NavBar = () => {
                             <Link to="/">Home</Link>
                         </li>
                     </ul>
+                    {/* Look up more about */}
+                    {/* <ul>
+                        <li>
+                            <Category> Categories </Category>
+                        </li>
+                    </ul> */}
                     <ul>
                         <li>
                             <Link to="/">Signup</Link>

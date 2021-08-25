@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {
     console.log("product ========", product);
 
     return (
-        <div className="itemsListContainer">
+        <div className="items-Detail-Container">
           <ItemDetail {...product}/>
         </div>   
     );

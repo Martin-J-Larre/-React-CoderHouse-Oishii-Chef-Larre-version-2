@@ -5,8 +5,9 @@ const Item = (props) => {
     
     return (
 
-         <div className="Item-container">
-             <h5>Id:{props.id}</h5>
+        <div className="Item-container">
+             <img className="img-item" src={props.imagenUrl} />
+             <h5 className="id-producto">Id:{props.id}</h5>
              <h5>$ {props.precio}</h5>
              <h5>{props.titulo}</h5>
              <ItemCount valorInicial={0} stock={10}/>
